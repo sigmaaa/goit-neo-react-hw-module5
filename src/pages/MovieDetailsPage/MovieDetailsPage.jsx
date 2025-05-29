@@ -3,6 +3,7 @@ import { useParams, NavLink, Outlet, useLocation } from "react-router-dom";
 import { fetchMovieById } from "../../api/api";
 import Loader from "../../components/Loader/Loader";
 import GoBackBtn from "../../components/GoBackBtn/GoBackBtn";
+import css from "./MovieDetails.module.css";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState();
@@ -36,9 +37,9 @@ const MovieDetailsPage = () => {
 
       {movie && (
         <div>
-          <div>
+          <div className={css.detailsContainer}>
             <img src={movie.poster} alt={movie.title} width="240px" />
-            <div>
+            <div className={css.detailsDescription}>
               <h2>
                 {movie.title} ({movie.release_year})
               </h2>
@@ -54,10 +55,20 @@ const MovieDetailsPage = () => {
             </div>
           </div>
           <hr />
-          <div>
+          <div className={css.addInfo}>
             <h3>Additional information</h3>
-            <NavLink to="cast">Cast</NavLink>
-            <NavLink to="reviews">Reviews</NavLink>
+            <ul className={css.castReviewList}>
+              <li>
+                <NavLink className={css.cast} to="cast">
+                  Cast
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={css.review} to="reviews">
+                  Reviews
+                </NavLink>
+              </li>
+            </ul>
           </div>
           <Outlet />
         </div>

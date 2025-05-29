@@ -1,0 +1,14 @@
+.backBtn {
+    margin: 15px 0;
+    position: relative;
+   
+}
+.backpage {
+    margin: 0 20px;
+}
+
+.backArrow {
+    position: absolute;
+    left: 0px;
+    top: 4px
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 import { fetchMovies } from "../../api/api";
+import css from "./MoviePage.module.css";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState();
@@ -37,9 +38,14 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="query" placeholder="Enter search query" />
+      <div className={css.formContainer}>
+        <form className={css.searchForm} onSubmit={handleSubmit}>
+          <input
+            className={css.searchInput}
+            type="text"
+            name="query"
+            placeholder="Enter search query"
+          />
           <button type="submit">Search</button>
         </form>
       </div>

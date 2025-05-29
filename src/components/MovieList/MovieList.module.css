@@ -1,0 +1,7 @@
+.movieList {
+    list-style: circle;
+    color: black;
+    padding: 20px;
+    margin: 0;
+}
+

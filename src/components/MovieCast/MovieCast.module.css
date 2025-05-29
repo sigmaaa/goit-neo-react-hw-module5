@@ -1,0 +1,18 @@
+.movieCastList {
+    padding: 0;
+    list-style: none;
+}
+
+.movieCastList li:not(:last-child) {
+    display: flex;
+    color: #323232;
+    flex-direction: column;
+    padding: 10px 0;
+
+}
+.movieCastList li:not(:last-child) {
+    border-bottom: 1px solid #c4c4c4;
+}
+.movieCastList li p {
+    margin: 5px 0;
+}

@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Navigation from "../Navigation/Navigation";
 import Loader from "../Loader/Loader";
-
+import css from "./App.module.css";
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
@@ -16,7 +16,7 @@ const NotFoundPage = lazy(() =>
 
 function App() {
   return (
-    <div>
+    <div className={css.container}>
       <Navigation />
       <Suspense fallback={<Loader />}>
         <Routes>

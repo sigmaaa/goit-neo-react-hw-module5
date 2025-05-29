@@ -1,0 +1,15 @@
+.navContainer {
+    padding: 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+}
+
+.navList {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.active {
+  color: blue;
+}
